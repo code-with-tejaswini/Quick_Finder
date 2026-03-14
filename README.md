@@ -1,4 +1,13 @@
 # Quick Finder – Service Provider Platform
+
+##Short Summary – Quick Finder: Service Provider Platform
+
+Quick Finder is a web-based platform designed to connect users with local service providers such as electricians, plumbers, carpenters, mechanics, and tutors. The system allows users to easily search for available service providers, view their details, and send booking requests through an online interface.
+
+The platform supports three types of users: Admin, Customer (User), and Service Provider. Customers can register, log in, search for services, and book providers. Service providers can manage their profiles, view booking requests, and accept or reject service requests. The Admin manages the entire system by monitoring users, service providers, and bookings.
+
+The system is developed using HTML, CSS, and JavaScript for the frontend, PHP for backend processing, and MySQL for database management. The platform provides a responsive interface and an organized booking system that makes it easier for users to find reliable local services quickly and efficiently
+
 ## Complete Deployment Guide
 
 ---
@@ -43,10 +52,12 @@ quick-finder/
 ## 🚀 Local Setup (XAMPP / WAMP / MAMP)
 
 ### Step 1 – Install a local server
+
 - Download XAMPP: https://www.apachefriends.org/
 - Install and start **Apache** and **MySQL**
 
 ### Step 2 – Place project files
+
 ```
 Copy the `quick-finder/` folder to:
   C:\xampp\htdocs\quick-finder\     (Windows)
@@ -54,13 +65,16 @@ Copy the `quick-finder/` folder to:
 ```
 
 ### Step 3 – Create the database
+
 1. Open browser → http://localhost/phpmyadmin
 2. Click **New** → Database name: `quick_finder` → Create
 3. Click the `quick_finder` database → **Import** tab
 4. Choose the `database.sql` file → Click **Go**
 
 ### Step 4 – Configure DB credentials
+
 Edit `connect.php`:
+
 ```php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');      // your MySQL username
@@ -69,18 +83,19 @@ define('DB_NAME', 'quick_finder');
 ```
 
 ### Step 5 – Access the site
+
 Open: http://localhost/quick-finder/
 
 ---
 
 ## 🔐 Default Login Credentials
 
-| Role     | Email                    | Password  |
-|----------|--------------------------|-----------|
-| Admin    | admin@quickfinder.com    | password  |
-| Provider | john@example.com         | password  |
-| Provider | maria@example.com        | password  |
-| User     | alice@example.com        | password  |
+| Role     | Email                 | Password |
+| -------- | --------------------- | -------- |
+| Admin    | admin@quickfinder.com | password |
+| Provider | john@example.com      | password |
+| Provider | maria@example.com     | password |
+| User     | alice@example.com     | password |
 
 > All passwords in `database.sql` use `password_hash()` with the value `password`.
 
@@ -89,20 +104,24 @@ Open: http://localhost/quick-finder/
 ## 🌐 Deploying to Live Server (cPanel / Hosting)
 
 ### Step 1 – Upload files
+
 - Use **FileZilla** or cPanel **File Manager**
 - Upload all project files to `public_html/quick-finder/`
   (or `public_html/` if it's the root domain)
 
 ### Step 2 – Create MySQL database on host
+
 1. Go to cPanel → **MySQL Databases**
 2. Create a database and a user
 3. Add user to database with **ALL PRIVILEGES**
 
 ### Step 3 – Import SQL
+
 1. Go to cPanel → **phpMyAdmin**
 2. Select the new database → Import → Upload `database.sql`
 
 ### Step 4 – Update connect.php
+
 ```php
 define('DB_HOST', 'localhost');
 define('DB_USER', 'your_cpanel_db_user');
@@ -111,6 +130,7 @@ define('DB_NAME', 'your_db_name');
 ```
 
 ### Step 5 – Visit your domain
+
 `https://yourdomain.com/quick-finder/`
 
 ---
@@ -128,23 +148,27 @@ define('DB_NAME', 'your_db_name');
 ## 📱 Features Summary
 
 ### Public
+
 - Home, Services, About, Contact pages
 - Search & filter providers by category + location
 - Provider public profile view
 
 ### Customer (User)
+
 - Register & login
 - Browse and search providers
 - Book service with date, time, message
 - View booking history with status
 
 ### Service Provider
+
 - Register (pending approval)
 - Login after admin approves
 - View & manage booking requests (accept / reject / complete)
 - Edit profile and change password
 
 ### Admin
+
 - Dashboard with stats
 - Approve / reject / delete providers
 - Manage users (toggle status, delete)
@@ -153,6 +177,7 @@ define('DB_NAME', 'your_db_name');
 ---
 
 ## 🛠 Tech Stack
+
 - **Frontend**: HTML5, CSS3 (custom), JavaScript (vanilla)
 - **Backend**: PHP 8+ (procedural)
 - **Database**: MySQL
@@ -162,11 +187,9 @@ define('DB_NAME', 'your_db_name');
 ---
 
 ## ✅ PHP Requirements
+
 - PHP 7.4+ (PHP 8.x recommended)
 - MySQLi extension enabled
 - `session_start()` support (standard)
 
 ---
-
-## 📞 Support
-For issues or customization contact: hello@quickfinder.com
