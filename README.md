@@ -1,6 +1,6 @@
 # Quick Finder – Service Provider Platform
 
-##Short Summary – Quick Finder: Service Provider Platform
+## Short Summary – Quick Finder: Service Provider Platform
 
 Quick Finder is a web-based platform designed to connect users with local service providers such as electricians, plumbers, carpenters, mechanics, and tutors. The system allows users to easily search for available service providers, view their details, and send booking requests through an online interface.
 
